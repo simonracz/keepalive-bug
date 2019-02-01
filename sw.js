@@ -1,5 +1,3 @@
-const map = new Map();
-
 self.addEventListener('install', event => {
   console.log("sw installed");
   event.waitUntil(self.skipWaiting());
@@ -25,7 +23,7 @@ self.addEventListener('fetch', function(event) {
     },
     pull(controller) {
       // Side note, backpressure doesn't really work with fetch at the moment in Firefox
-      console.log("pull called");
+      console.log("pull called - enqueue new data");
       const data = new Uint8Array(10000);
       controller.enqueue(data);
     }
