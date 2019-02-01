@@ -19,12 +19,12 @@
         } else if(reg.active) {
           console.log('Service worker active');
         }
-        // reg.update();
+        reg.update();
 
         setTimeout(() => {
           let link = document.createElement('a');
           let click = new MouseEvent('click');
-          link.href = reg.scope + "/download/";
+          link.href = reg.scope + "download/";
           link.dispatchEvent(click)
         }, 5000);
 

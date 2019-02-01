@@ -17,6 +17,10 @@ self.addEventListener('message', event => {
 });
 
 self.addEventListener('fetch', function(event) {
+  let limit = 1000000;
+  if (!event.request.url.endsWith('/download/')) {
+    return;
+  }
   const stream = new ReadableStream({
     start(controller) {
       console.log("start");
@@ -26,6 +30,10 @@ self.addEventListener('fetch', function(event) {
       console.log("pull called - enqueue new data");
       const data = new Uint8Array(10000);
       controller.enqueue(data);
+      limit = limit - 1;
+      if (limit == 0) {
+        controller.close();
+      }
     }
   });
   const headers = {
