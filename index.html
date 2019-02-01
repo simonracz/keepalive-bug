@@ -6,7 +6,7 @@
 <body>
   Please open the dev console.
 
-  A service worker will be installed and a fake download will be started. The download would fail after a while, because the service worker will get terminated.
+  A service worker will be installed and a fake download will be started. The download will fail after a few seconds, because the service worker will get terminated.
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register("/sw.js")
