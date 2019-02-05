@@ -14,6 +14,8 @@ The official solution is to try to wrap long running operations up in a Promise 
 
 What I implemented is a PING message to the sw, to keep it alive while it's needed.
 
+Chrome has the same "bug", however their time limit is 5 mins, that's why I didn't see it.
+
 ## Update 2
 Contrary to Update 1, this is assumed to be a bug.
 
