@@ -1,4 +1,4 @@
-# !Update!
+# Updates
 ## Update 1
 According to this w3c spec communication this is not a bug : https://github.com/w3c/ServiceWorker/issues/882#issuecomment-262754779
 
