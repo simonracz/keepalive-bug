@@ -18,5 +18,6 @@ What I implemented is a PING message to the sw, to keep it alive while it's need
 Contrary to Update 1, this is assumed to be a bug.
 
 Firefox : https://bugzilla.mozilla.org/show_bug.cgi?id=1302715
+
 Chrome : https://bugs.chromium.org/p/chromium/issues/detail?id=678798
 
